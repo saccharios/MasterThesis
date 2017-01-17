@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{FE80B75A-1A63-4110-BB88-55F7F7BE1676}</ProjectGuid>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <Keyword>ManagedCProj</Keyword>
+    <RootNamespace>RobotSwarmDLL</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <LibraryPath>C:\Apps\CppLib\opencv\build\x86\vc10\lib;C:\Apps\CppLib\cvblobslib_OpenCV_v8_3\Debug;C:\Apps\CppLib\boost_1_53_0\stage\lib;$(LibraryPath)</LibraryPath>
+    <OutDir>..\RobotSwarmGUI\bin\Debug</OutDir>
+    <IncludePath>C:\Apps\CppLib\opencv\build\include\opencv2;C:\Apps\CppLib\opencv\build\include\opencv;C:\Apps\CppLib\opencv\build\include;C:\Apps\CppLib\boost_1_53_0;C:\Apps\CppLib\cvblobslib_OpenCV_v8_3;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Apps\CppLib\boost_1_53_0;C:\Apps\CppLib\opencv\build\include;C:\Apps\CppLib\opencv\build\include\opencv;C:\Apps\CppLib\cvblobslib_OpenCV_v8_3;C:\Apps\CppLib\opencv\build\include\opencv2;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Apps\opencv\build\x86\vc10\lib;C:\Apps\CppLib\cvblobslib_OpenCV_v8_3\Release;C:\Apps\CppLib\boost_1_53_0\stage\lib;$(LibraryPath)</LibraryPath>
+    <OutDir>..\RobotSwarmGUI\bin\Release</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <AdditionalIncludeDirectories>C:\Apps\CppLib\cvblobslib_OpenCV_v8_3;C:\Users\steffrei\Documents\rswarm\RobotSwarm\RobotSwarmDLL;C:\Apps\CppLib\boost_1_53_0</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <MinimalRebuild>
+      </MinimalRebuild>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <CompileAsManaged>true</CompileAsManaged>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>libusb-1.0.lib;cvblobslib.lib;opencv_core243d.lib;opencv_highgui243d.lib;opencv_imgproc243d.lib;opencv_objdetect243d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\steffrei\Documents\rswarm\RobotSwarm\RobotSwarmDLL;C:\Apps\CppLib\boost_1_53_0\stage\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <AdditionalIncludeDirectories>C:\Apps\CppLib\opencv\build\include\opencv;C:\Users\steffrei\Documents\rswarm\RobotSwarm\RobotSwarmDLL;C:\Apps\CppLib\boost_1_53_0</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>libusb-1.0.lib;cvblobslib.lib;opencv_core243.lib;opencv_highgui243.lib;opencv_imgproc243.lib;opencv_objdetect243.lib;libboost_date_time-vc100-mt-1_53.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Apps\CppLib\cvblobslib_OpenCV_v8_3\Release;C:\Users\steffrei\Documents\rswarm\RobotSwarm\RobotSwarmGUI\bin\Release;C:\Apps\CppLib\opencv\build\x86\vc10\lib;C:\Users\steffrei\Documents\rswarm\RobotSwarm\RobotSwarmDLL\Release;C:\Scratch\CppLib\boost_1_53_0\stage\lib</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\RobotSwarmGUI\bin\Debug\Algorithms\VirtualPotentialWalk.h" />
+    <ClInclude Include="CAlgorithmSF.h" />
+    <ClInclude Include="CameraConfig.h" />
+    <ClInclude Include="CCamera.h" />
+    <ClInclude Include="CElisa.h" />
+    <ClInclude Include="CEpuck.h" />
+    <ClInclude Include="CFormComm.h" />
+    <ClInclude Include="CGridSearch.h" />
+    <ClInclude Include="CKhepera.h" />
+    <ClInclude Include="CRoboBlob.h" />
+    <ClInclude Include="CRobot.h" />
+    <ClInclude Include="CStochasticLocalization.h" />
+    <ClInclude Include="CVirtualPotential.h" />
+    <ClInclude Include="CLineSearch.h" />
+    <ClInclude Include="CMetropolisHastings.h" />
+    <ClInclude Include="CEKFTest.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="CSimulatedAnnealing.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="CAlgorithmSF.cpp" />
+    <ClCompile Include="CCamera.cpp" />
+    <ClCompile Include="CElisa.cpp">
+      <DebugInformationFormat Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ProgramDatabase</DebugInformationFormat>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</CompileAsManaged>
+      <ExceptionHandling Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Async</ExceptionHandling>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Default</BasicRuntimeChecks>
+    </ClCompile>
+    <ClCompile Include="CEpuck.cpp" />
+    <ClCompile Include="CFormComm.cpp" />
+    <ClCompile Include="CGridSearch.cpp" />
+    <ClCompile Include="CKhepera.cpp" />
+    <ClCompile Include="CRoboBlob.cpp" />
+    <ClCompile Include="CRobot.cpp" />
+    <ClCompile Include="CVirtualPotential.cpp" />
+    <ClCompile Include="CLineSearch.cpp" />
+    <ClCompile Include="CMetropolisHastings.cpp" />
+    <ClCompile Include="CEKFTest.cpp" />
+    <ClCompile Include="RobotSwarmDLL.cpp" />
+    <ClCompile Include="CStochasticLocalization.cpp" />
+    <ClCompile Include="CSimulatedAnnealing.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.ico" />
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="app.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Target Name="GenerateTargetFrameworkMonikerAttribute" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

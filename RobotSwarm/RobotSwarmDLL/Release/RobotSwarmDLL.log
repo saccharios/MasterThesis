@@ -1,0 +1,67 @@
+﻿Build started 11.10.2013 15:00:35.
+     1>Project "C:\Users\steffrei\Documents\rswarm\RobotSwarm\RobotSwarmDLL\RobotSwarmDLL.vcxproj" on node 2 (build target(s)).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(299,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+     1>InitializeBuildStatus:
+         Creating "Release\RobotSwarmDLL.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /IC:\Apps\CppLib\opencv\build\include\opencv /IC:\Users\steffrei\Documents\rswarm\RobotSwarm\RobotSwarmDLL /IC:\Apps\CppLib\boost_1_53_0 /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /Zi /clr /nologo /W3 /WX- /O2 /Oy- /D WIN32 /D NDEBUG /D _WINDLL /D _MBCS /D _AFXDLL /EHa /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt CAlgorithmSF.cpp CCamera.cpp CEKFTest.cpp CElisa.cpp CEpuck.cpp CFormComm.cpp CGridSearch.cpp CKhepera.cpp CLineSearch.cpp CMetropolisHastings.cpp CRoboBlob.cpp CRobot.cpp CSimulatedAnnealing.cpp CStochasticLocalization.cpp CVirtualPotential.cpp RobotSwarmDLL.cpp /clr:nostdlib 
+         CAlgorithmSF.cpp
+         CCamera.cpp
+         CEKFTest.cpp
+         CElisa.cpp
+     1>c:\users\steffrei\documents\rswarm\robotswarm\robotswarmdll\libusb.h(862): warning C4200: nonstandard extension used : zero-sized array in struct/union
+                 Cannot generate copy-ctor or copy-assignment operator when UDT contains a zero-sized array
+         CEpuck.cpp
+         CFormComm.cpp
+     1>CFormComm.cpp(110): warning C4018: '<' : signed/unsigned mismatch
+     1>CFormComm.cpp(214): warning C4018: '<=' : signed/unsigned mismatch
+         CGridSearch.cpp
+         CKhepera.cpp
+         CLineSearch.cpp
+         CMetropolisHastings.cpp
+         CRoboBlob.cpp
+         CRobot.cpp
+         CSimulatedAnnealing.cpp
+         CStochasticLocalization.cpp
+         CVirtualPotential.cpp
+         RobotSwarmDLL.cpp
+     1>RobotSwarmDLL.cpp(430): warning C4018: '>' : signed/unsigned mismatch
+     1>RobotSwarmDLL.cpp(492): warning C4018: '>' : signed/unsigned mismatch
+         Generating Code...
+       ResourceCompile:
+         All outputs are up-to-date.
+       Link:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"..\RobotSwarmGUI\bin\Release\RobotSwarmDLL.dll" /INCREMENTAL:NO /NOLOGO /LIBPATH:C:\Apps\CppLib\cvblobslib_OpenCV_v8_3\Release /LIBPATH:C:\Users\steffrei\Documents\rswarm\RobotSwarm\RobotSwarmGUI\bin\Release /LIBPATH:C:\Apps\CppLib\opencv\build\x86\vc10\lib /LIBPATH:C:\Users\steffrei\Documents\rswarm\RobotSwarm\RobotSwarmDLL\Release /LIBPATH:C:\Scratch\CppLib\boost_1_53_0\stage\lib "libusb-1.0.lib" cvblobslib.lib opencv_core243.lib opencv_highgui243.lib opencv_imgproc243.lib opencv_objdetect243.lib "libboost_date_time-vc100-mt-1_53.lib" /MANIFEST /ManifestFile:"Release\RobotSwarmDLL.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\steffrei\Documents\rswarm\RobotSwarm\RobotSwarmGUI\bin\Release\RobotSwarmDLL.pdb" /TLBID:1 /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 /DLL Release\app.res
+         Release\AssemblyInfo.obj
+         Release\CAlgorithmSF.obj
+         Release\CCamera.obj
+         Release\CElisa.obj
+         Release\CEpuck.obj
+         Release\CFormComm.obj
+         Release\CGridSearch.obj
+         Release\CKhepera.obj
+         Release\CRoboBlob.obj
+         Release\CRobot.obj
+         Release\CVirtualPotential.obj
+         Release\CLineSearch.obj
+         Release\CMetropolisHastings.obj
+         Release\CEKFTest.obj
+         Release\RobotSwarmDLL.obj
+         Release\CStochasticLocalization.obj
+         Release\CSimulatedAnnealing.obj
+            Creating library ..\RobotSwarmGUI\bin\Release\RobotSwarmDLL.lib and object ..\RobotSwarmGUI\bin\Release\RobotSwarmDLL.exp
+     1>RobotSwarmDLL.obj : warning LNK4248: unresolved typeref token (01000021) for 'CvCapture'; image may not run
+     1>CCamera.obj : warning LNK4248: unresolved typeref token (0100001A) for 'CvCapture'; image may not run
+     1>CElisa.obj : warning LNK4248: unresolved typeref token (0100001C) for 'libusb_device_handle'; image may not run
+     1>CElisa.obj : warning LNK4248: unresolved typeref token (01000029) for 'libusb_context'; image may not run
+         RobotSwarmDLL.vcxproj -> C:\Users\steffrei\Documents\rswarm\RobotSwarm\RobotSwarmDLL\..\RobotSwarmGUI\bin\Release\RobotSwarmDLL.dll
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"..\RobotSwarmGUI\bin\Release\RobotSwarmDLL.dll;#2" /manifest Release\RobotSwarmDLL.dll.intermediate.manifest "c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\Include\Manifest\dpiaware.manifest"
+       FinalizeBuildStatus:
+         Deleting file "Release\RobotSwarmDLL.unsuccessfulbuild".
+         Touching "Release\RobotSwarmDLL.lastbuildstate".
+     1>Done Building Project "C:\Users\steffrei\Documents\rswarm\RobotSwarm\RobotSwarmDLL\RobotSwarmDLL.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:01:12.60

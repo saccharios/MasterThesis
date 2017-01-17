@@ -1,0 +1,46 @@
+﻿Build started 11.10.2013 15:00:04.
+     1>Project "C:\Users\steffrei\Documents\rswarm\RobotSwarm\RobotSwarmDLL\RobotSwarmDLL.vcxproj" on node 2 (build target(s)).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(299,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+     1>InitializeBuildStatus:
+         Creating "Debug\RobotSwarmDLL.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /IC:\Apps\CppLib\cvblobslib_OpenCV_v8_3 /IC:\Users\steffrei\Documents\rswarm\RobotSwarm\RobotSwarmDLL /IC:\Apps\CppLib\boost_1_53_0 /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDLL /D _MBCS /D _AFXDLL /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt CStochasticLocalization.cpp /clr:nostdlib 
+         CStochasticLocalization.cpp
+       ResourceCompile:
+         All outputs are up-to-date.
+       Link:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"..\RobotSwarmGUI\bin\Debug\RobotSwarmDLL.dll" /INCREMENTAL /NOLOGO /LIBPATH:C:\Users\steffrei\Documents\rswarm\RobotSwarm\RobotSwarmDLL /LIBPATH:C:\Apps\CppLib\boost_1_53_0\stage\lib "libusb-1.0.lib" cvblobslib.lib opencv_core243d.lib opencv_highgui243d.lib opencv_imgproc243d.lib opencv_objdetect243d.lib /MANIFEST /ManifestFile:"Debug\RobotSwarmDLL.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\steffrei\Documents\rswarm\RobotSwarm\RobotSwarmGUI\bin\Debug\RobotSwarmDLL.pdb" /ASSEMBLYDEBUG /TLBID:1 /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 /DLL Debug\app.res
+         Debug\AssemblyInfo.obj
+         Debug\CAlgorithmSF.obj
+         Debug\CCamera.obj
+         Debug\CElisa.obj
+         Debug\CEpuck.obj
+         Debug\CFormComm.obj
+         Debug\CGridSearch.obj
+         Debug\CKhepera.obj
+         Debug\CRoboBlob.obj
+         Debug\CRobot.obj
+         Debug\CVirtualPotential.obj
+         Debug\CLineSearch.obj
+         Debug\CMetropolisHastings.obj
+         Debug\CEKFTest.obj
+         Debug\RobotSwarmDLL.obj
+         Debug\CStochasticLocalization.obj
+         Debug\CSimulatedAnnealing.obj
+     1>cvblobslib.lib(ComponentLabeling.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/INCREMENTAL:NO' specification
+            Creating library ..\RobotSwarmGUI\bin\Debug\RobotSwarmDLL.lib and object ..\RobotSwarmGUI\bin\Debug\RobotSwarmDLL.exp
+     1>RobotSwarmDLL.obj : warning LNK4248: unresolved typeref token (01000021) for 'CvCapture'; image may not run
+     1>CCamera.obj : warning LNK4248: unresolved typeref token (0100001A) for 'CvCapture'; image may not run
+     1>CElisa.obj : warning LNK4248: unresolved typeref token (0100001C) for 'libusb_device_handle'; image may not run
+     1>CElisa.obj : warning LNK4248: unresolved typeref token (01000029) for 'libusb_context'; image may not run
+         RobotSwarmDLL.vcxproj -> C:\Users\steffrei\Documents\rswarm\RobotSwarm\RobotSwarmDLL\..\RobotSwarmGUI\bin\Debug\RobotSwarmDLL.dll
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"..\RobotSwarmGUI\bin\Debug\RobotSwarmDLL.dll;#2" /manifest Debug\RobotSwarmDLL.dll.intermediate.manifest "c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\Include\Manifest\dpiaware.manifest"
+       FinalizeBuildStatus:
+         Deleting file "Debug\RobotSwarmDLL.unsuccessfulbuild".
+         Touching "Debug\RobotSwarmDLL.lastbuildstate".
+     1>Done Building Project "C:\Users\steffrei\Documents\rswarm\RobotSwarm\RobotSwarmDLL\RobotSwarmDLL.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:08.16
