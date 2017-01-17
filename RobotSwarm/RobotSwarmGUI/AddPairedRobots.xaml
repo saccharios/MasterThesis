@@ -1,0 +1,13 @@
+﻿<Window x:Class="RobotSwarmGUI.AddPairedRobots"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="AddPairedRobots" Height="300" Width="300" Background="Beige">
+    <Grid>
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,63,99,0" Name="ComPortTextBox" VerticalAlignment="Top" Width="76" />
+        <Label Content="Com Port:"  Height="23" HorizontalAlignment="Left" Margin="32,63,0,0" Name="NrTextBox" VerticalAlignment="Top" Width="73" FontWeight="Bold" />
+        <Label Content="Nr:" FontWeight="Bold" Height="23" HorizontalAlignment="Left" Margin="68,92,0,0" Name="NumberLabel" VerticalAlignment="Top" Width="29" />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,92,99,0" Name="DeviceNrTextBox" VerticalAlignment="Top" Width="76" />
+        <Button Content="Add" Height="25" HorizontalAlignment="Left" Margin="58,136,0,0" Name="AddRobotButton" VerticalAlignment="Top" Width="76" Click="AddRobotButton_Click" />
+        <Button Content="Cancel" Height="25" HorizontalAlignment="Left" Margin="153,136,0,0" Name="CancelButton" VerticalAlignment="Top" Width="76" Click="CancelButton_Click" />
+    </Grid>
+</Window>

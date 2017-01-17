@@ -1,0 +1,17 @@
+C:\Users\steffrei\Documents\rswarm\RobotSwarm\RobotSwarmGUI\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\steffrei\Documents\rswarm\RobotSwarm\RobotSwarmGUI\obj\x86\Release\AddPairedRobots.baml
+C:\Users\steffrei\Documents\rswarm\RobotSwarm\RobotSwarmGUI\obj\x86\Release\MainWindow.baml
+C:\Users\steffrei\Documents\rswarm\RobotSwarm\RobotSwarmGUI\obj\x86\Release\AddPairedRobots.g.cs
+C:\Users\steffrei\Documents\rswarm\RobotSwarm\RobotSwarmGUI\obj\x86\Release\MainWindow.g.cs
+C:\Users\steffrei\Documents\rswarm\RobotSwarm\RobotSwarmGUI\obj\x86\Release\App.g.cs
+C:\Users\steffrei\Documents\rswarm\RobotSwarm\RobotSwarmGUI\obj\x86\Release\RobotSwarmGUI_MarkupCompile.cache
+C:\Users\steffrei\Documents\rswarm\RobotSwarm\RobotSwarmGUI\obj\x86\Release\RobotSwarmGUI.g.resources
+C:\Users\steffrei\Documents\rswarm\RobotSwarm\RobotSwarmGUI\obj\x86\Release\RobotSwarmGUI.Properties.Resources.resources
+C:\Users\steffrei\Documents\rswarm\RobotSwarm\RobotSwarmGUI\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Users\steffrei\Documents\rswarm\RobotSwarm\RobotSwarmGUI\obj\x86\Release\GenerateResource.write.1.tlog
+C:\Users\steffrei\Documents\rswarm\RobotSwarm\RobotSwarmGUI\bin\Release\RobotSwarmGUI.exe
+C:\Users\steffrei\Documents\rswarm\RobotSwarm\RobotSwarmGUI\bin\Release\RobotSwarmGUI.pdb
+C:\Users\steffrei\Documents\rswarm\RobotSwarm\RobotSwarmGUI\bin\Release\RobotSwarmDLL.dll
+C:\Users\steffrei\Documents\rswarm\RobotSwarm\RobotSwarmGUI\bin\Release\RobotSwarmDLL.pdb
+C:\Users\steffrei\Documents\rswarm\RobotSwarm\RobotSwarmGUI\obj\x86\Release\RobotSwarmGUI.exe
+C:\Users\steffrei\Documents\rswarm\RobotSwarm\RobotSwarmGUI\obj\x86\Release\RobotSwarmGUI.pdb

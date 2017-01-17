@@ -1,0 +1,206 @@
+﻿<Window x:Class="RobotSwarmGUI.MainWindow"
+        Name="myWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="RobotSwarm" Width="640" Height="480" Icon="images/epuck.jpg">
+   <Window.Background>        
+        <ImageBrush ImageSource="images/epuck.jpg" />
+   </Window.Background>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Menu HorizontalAlignment="Stretch" Name="menu1" VerticalAlignment="Top" Height="19" Grid.ColumnSpan="2">
+            <MenuItem Header="_Menu">
+
+                <MenuItem Header="_List Devices" Click="Quick_Search_Click" >
+                    <MenuItem.ToolTip>
+                        <ToolTip>
+                            <StackPanel>
+                                <TextBlock FontWeight="Bold">List Devices</TextBlock>
+                                <TextBlock>Lists the robots that are already paired</TextBlock>
+                            </StackPanel>
+                        </ToolTip>
+                    </MenuItem.ToolTip>
+                </MenuItem>
+                
+                <MenuItem Header="_Proper Search" Click="Proper_Search_Click" >
+                    <MenuItem.ToolTip>
+                        <ToolTip>
+                            <StackPanel>
+                                <TextBlock FontWeight="Bold">Proper Search</TextBlock>
+                                <TextBlock>Scans the environment for active robots and adds them to the list</TextBlock>
+                            </StackPanel>
+                        </ToolTip>
+                    </MenuItem.ToolTip>
+                </MenuItem>
+
+                <MenuItem Header="_Add Paired Robot" >
+                    <!-- <MenuItem.ToolTip>
+                        <ToolTip>
+                            <StackPanel>
+                                <TextBlock FontWeight="Bold">Add a paired robot</TextBlock>
+                                <TextBlock>Choose a robot which is already paired and add it to the list</TextBlock>
+                            </StackPanel>
+                        </ToolTip>
+                    </MenuItem.ToolTip>-->
+
+                    <MenuItem Header="_Khepera" Click="Add_Paired_Robot_Click" Name="KheperaHeader">
+                        <!--<MenuItem.ToolTip>
+                            <ToolTip>
+                                <StackPanel>
+                                    <TextBlock FontWeight="Bold">Add a Khepera</TextBlock>
+                                    <TextBlock>Adds a paired Khepera to the list</TextBlock>
+                                </StackPanel>
+                            </ToolTip>
+                        </MenuItem.ToolTip>-->
+                    </MenuItem>
+
+                <MenuItem Header="_Epuck" Click="Add_Paired_Robot_Click" Name="EpuckHeader" >
+                    <!--   <MenuItem.ToolTip>
+                            <ToolTip>
+                                <StackPanel>
+                                    <TextBlock FontWeight="Bold">Add an Epuck</TextBlock>
+                                    <TextBlock>Adds a paired Epuck to the list</TextBlock>
+                                </StackPanel>
+                            </ToolTip>
+                        </MenuItem.ToolTip>-->
+                    </MenuItem>
+
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="_Help" Name="HelpMenu" >
+                <MenuItem Header="_Disable Help" Name="MenuDisableHelp" Click="Disable_Help" IsCheckable="True">
+                </MenuItem>
+            </MenuItem> 
+        </Menu>
+
+        <Grid Grid.Row="0" Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="4*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="80*"/>
+                <ColumnDefinition Width="229*" />
+            </Grid.ColumnDefinitions>
+            
+            <ListBox Name="listBox1" ItemsSource="{Binding PairedDeviceCollection}" Margin="60,42,48,34" ScrollViewer.VerticalScrollBarVisibility="Auto"  Grid.ColumnSpan="2" Grid.RowSpan="2" Background="#AED0EDF2">
+                <ListBox.Resources>
+                    <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}">Transparent</SolidColorBrush>
+                </ListBox.Resources>
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                            <CheckBox Name="checkboxDevice" Content="{Binding DeviceName}" IsChecked="{Binding IsChecked}"  Checked="checkboxDevice_Checked" Unchecked="checkboxDevice_Unchecked" Margin="10"/>
+                                <Ellipse Name="connectionInfo" Fill="{Binding ConnectionState}" Width="10" Height="10"/>
+                                <Label Name="runInfo" Content="{Binding Algorithm}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+            </ListBox>
+            <StackPanel Grid.Row="1" VerticalAlignment="Center" Grid.ColumnSpan="2">
+                <!--  
+                <Button Content="List Devices" Height="21" Name="Quick_Search" Click="Quick_Search_Click"  VerticalAlignment="Center" Margin="50,10,50,5"/>
+                <Button Content="Proper Search" Height="21" Name="Proper_Search" Click="Proper_Search_Click" VerticalAlignment="Center" Margin="50,0,50,10"/>
+                -->
+            </StackPanel>
+           
+        </Grid>
+        <StackPanel Grid.Row="1" Grid.Column="0" VerticalAlignment="Center">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Name="connectButton" Content="Connect" Height="23" Width="75" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10" Click="Connect_Click" ToolTipService.IsEnabled="{Binding HelpEnabled}" >
+                    <Button.ToolTip>
+                        <ToolTip>
+                            <StackPanel>
+                                <TextBlock FontWeight="Bold">Connect</TextBlock>
+                                <TextBlock>Connect a robot</TextBlock>
+                            </StackPanel>
+                        </ToolTip>
+                    </Button.ToolTip>
+                </Button>
+
+                <Button Name="disconnectButton" Content="Disconnect" Height="23" Width="75" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10" Click="Disconnect_Click" >
+                    <Button.ToolTip>
+                        <ToolTip>
+                            <StackPanel>
+                                <TextBlock FontWeight="Bold">Disconnect</TextBlock>
+                                <TextBlock>Disconnect a robot</TextBlock>
+                            </StackPanel>
+                        </ToolTip>
+                    </Button.ToolTip>
+                </Button>
+            </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    
+                <Button Name="startButton" Content="Start" Height="23" Width="75" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" Click="Start_Click" >
+                        <Button.ToolTip>
+                            <ToolTip>
+                                <StackPanel>
+                                    <TextBlock FontWeight="Bold">Start</TextBlock>
+                                    <TextBlock>Start a robot</TextBlock>
+                                </StackPanel>
+                            </ToolTip>
+                        </Button.ToolTip>
+                    </Button>
+
+                <Button Name="stopButton" Content="Stop" Height="23" Width="75" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" Click="Stop_Click" >
+                    <Button.ToolTip>
+                        <ToolTip>
+                            <StackPanel>
+                                <TextBlock FontWeight="Bold">Stop</TextBlock>
+                                <TextBlock>Stop a robot</TextBlock>
+                            </StackPanel>
+                        </ToolTip>
+                    </Button.ToolTip>
+                </Button>
+            </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    
+                <Button Name="removeButton" Content="Unpair" Height="23" Width="75" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" Click="Remove_Click" >
+                    <Button.ToolTip>
+                        <ToolTip>
+                            <StackPanel>
+                                <TextBlock FontWeight="Bold">Remove</TextBlock>
+                                <TextBlock>Remove a robot from the list and unpair it.</TextBlock>
+                            </StackPanel>
+                        </ToolTip>
+                    </Button.ToolTip>
+                </Button>
+                    
+                    <Button Name="calibrateButton" Content="Calibrate" Height="23" Width="75" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" Click="Calibrate_Click" MouseEnter="Button_MouseEnter" IsEnabled="True">
+                    <Button.ToolTip>
+                        <ToolTip>
+                            <StackPanel>
+                                <TextBlock FontWeight="Bold">Calibrate</TextBlock>
+                                <TextBlock>Calibrate the proximity sensors of the robot</TextBlock>
+                            </StackPanel>
+                        </ToolTip>
+                    </Button.ToolTip>
+                </Button>
+                
+            </StackPanel>
+        </StackPanel>     
+        <ComboBox Name="AlgComboBox" Grid.Column="1" ItemsSource="{Binding AlgorithmCollection}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="32,42,0,0">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <Label Content="{Binding AlgName}"/>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <TextBox Name="InfoBox" Grid.Row="1" Grid.Column="1" Text="{Binding InfoText}" HorizontalAlignment="Stretch" Margin="10,0" Background="#ADD0EDF2"></TextBox>
+        <ListBox Grid.Column="1" Name="listBox2" ItemsSource="{Binding RemovedRoboBlobsCollection}" ScrollViewer.VerticalScrollBarVisibility="Auto" Height="162" HorizontalAlignment="Left" Margin="34,94,0,0" VerticalAlignment="Top" Width="180" Background="#AED0EDF2">
+            <ListBox.Resources>
+                <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}">Transparent</SolidColorBrush>
+            </ListBox.Resources>
+        </ListBox>
+        <Label Content="Removed Robot List" Grid.Column="1" Height="25" HorizontalAlignment="Left" Margin="32,70,0,0" Name="label1" VerticalAlignment="Top" Width="172" FontSize="12" FontWeight="Bold" Foreground="#FFE5CDA4" />
+    </Grid>
+</Window>
