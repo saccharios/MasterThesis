@@ -328,9 +328,14 @@ void run_device(void) {
 
 
 
-
 void navigation(void)
 {
+// Author: Stefan Frei, 2013
+// Navigation function, the epuck moves from "cs" to "es"
+// The movement is split in three parts:
+// 1) Circle 2) Straight line 3) Circle
+// There are 4 possibilites, of which the shortest will be chosen.
+// Do not chose the sampling time closed_loops_Ts too short or the robot will not reach its target in time.
 	cs_a = normalize_angle(cs_a);
 	es_a = normalize_angle(es_a);
 
@@ -629,8 +634,8 @@ void navigation(void)
 	return;
 }
 
-
 void Circle_Drive(void)
+// Author: Stefan Frei, 2013
 {	//uses ul_A, ur_A, u_straight, ul_B, ur_B, gamma, circle flag, angle tol, cs_a, es_a, dl_C, dl_L
 	
 	if (circle_flag == 0 && ( fabsf(gamma-cs_a) <= angle_tol || fabsf(fabsf(gamma-cs_a)-2*PI) <= angle_tol ) ) // check if leaving circle A
@@ -716,6 +721,7 @@ void Circle_Drive(void)
 
 
 float normalize_angle(float alpha){
+	// Author: Stefan Frei, 2013
 // wraps alpha into [0,2*pi]
 	float beta;
 	beta = fmodf(alpha,2*PI);
