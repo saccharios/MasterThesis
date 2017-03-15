@@ -1,10 +1,10 @@
 Welcome!
 This repsitory contains the code which I and my predecessors wrote for my master thesis in electrical engineering at ETH Zürich.
 There are two programs in the repo. 
-The first is the firmware for an e-puck (small robot with two wheels). 
-To the supplier firmware I have added a special mode of navigating in the file epuckFirmwareMod/DemoGCtronic/DemoMASF/rundevice.c.
-The secon program is RobotSwarm. 
-It runs on a normal computer and steers several e-pucks over bluetooth with a camera as positioning system.
+The first is the firmware for an e-puck (the e-puck is a small robot with two wheels). 
+To the supplier firmware I have added a special mode of navigaionin the file epuckFirmwareMod/DemoGCtronic/DemoMASF/rundevice.c.
+The second program is RobotSwarm. 
+It runs on the computer and steers several e-pucks over bluetooth with a camera as positioning system.
 The camera generates pictures of the robots of which we extract their position and head angle. 
 To faciliate this, the robots have a blue and black sticker on their top surface.
 Because the measurement is quite noisy, and problems arise when two robots are close together (i.e. you cannot distinguish the individual robots anymore by looking at the picture), we use a measurement assignment algorithm to assign to each robot the best matching measurment.
