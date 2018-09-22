@@ -1,9 +1,11 @@
-This repo contains the code which I wrote for my master thesis in electrical engineering at ETH Zürich.
+***Welcome***
+
+This repo contains the code which I wrote for my master thesis in electrical engineering at ETH ZÃ¼rich.
 The goal of this thesis is to apply and compare several search algorithms in a real world setting with two-wheeled robots.
 
 Check out https://youtu.be/2cl1_fTFdQk where seven robots are moving according to "stochastic localization of sources".
 
-More detailed explanation about the repo and the project:
+***More detailed explanation about the repo and the project:***
 
 There are two programs in the repo. 
 The first is the firmware for an e-puck (the e-puck is a small robot with two wheels). 
