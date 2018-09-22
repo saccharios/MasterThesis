@@ -1,20 +1,20 @@
-***Welcome***
+# Welcome to MasterThesis
 
 This repo contains the code which I wrote for my master thesis in electrical engineering at ETH Zürich.
 The goal of this thesis is to apply and compare several search algorithms in a real world setting with two-wheeled robots.
 
-Check out https://youtu.be/2cl1_fTFdQk where seven robots are moving according to "stochastic localization of sources".
+Check out this [video](https://youtu.be/2cl1_fTFdQk) where seven robots are moving according to "stochastic localization of sources".
 
 ***More detailed explanation about the repo and the project:***
 
-There are two programs in the repo. 
+There are two programs in the repo.  
 The first is the firmware for an e-puck (the e-puck is a small robot with two wheels). 
-To the supplier firmware I have added a special mode of navigaionin the file epuckFirmwareMod/DemoGCtronic/DemoMASF/rundevice.c.
-The second program is RobotSwarm. 
+To the supplier firmware I have added a special mode of navigaionin the file epuckFirmwareMod/DemoGCtronic/DemoMASF/rundevice.c.  
+The second program is RobotSwarm.
 It runs on the computer and steers several e-pucks over bluetooth with a camera as positioning system.
 The camera generates pictures of the robots of which we extract their position and head angle. 
 To faciliate this, the robots have a blue and black sticker on their top surface.
-Because the measurement is quite noisy, and problems arise when two robots are close together (i.e. you cannot distinguish the individual robots anymore by looking at the picture), we use a measurement assignment algorithm to assign to each robot the best matching measurment.
+Because the measurement is quite noisy, and problems arise when two robots are close together (i.e. you cannot distinguish the individual robots anymore by looking at the picture), we use a measurement assignment algorithm to assign to each robot the best matching measurment.  
 We then run an Extended Kalman Filter (EKF) for each robot to obtain a good estimate of its positions, head angle and velocities.
 The robots can either be freely moving around in a virtual force field, or some special localization algorithms can be chosen.
 My thesis focus on these localization algorithms. 
