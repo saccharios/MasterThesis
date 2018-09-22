@@ -1,5 +1,10 @@
-Welcome!
-This repsitory contains the code which I and my predecessors wrote for my master thesis in electrical engineering at ETH Zürich.
+This repo contains the code which I wrote for my master thesis in electrical engineering at ETH Zürich.
+The goal of this thesis is to apply and compare several search algorithms in a real world setting with two-wheeled robots.
+
+Check out https://youtu.be/2cl1_fTFdQk where seven robots are moving according to "stochastic localization of sources".
+
+More detailed explanation about the repo and the project:
+
 There are two programs in the repo. 
 The first is the firmware for an e-puck (the e-puck is a small robot with two wheels). 
 To the supplier firmware I have added a special mode of navigaionin the file epuckFirmwareMod/DemoGCtronic/DemoMASF/rundevice.c.
@@ -13,8 +18,7 @@ The robots can either be freely moving around in a virtual force field, or some 
 My thesis focus on these localization algorithms. 
 The board on which the robots drive has a main virtual source, which the robots try to find.
 The final report is also added in this repo, in case you are interested. 
-If you look at the source files, I apologize in advance for the mess. 
+If you look at the source files I apologize in advance for the mess. 
 I based my project on a previous project, so the architecture was already given.
 Also, as this is my first major programming exercise the style and design is quite poor.
-Here is a link (https://youtu.be/2cl1_fTFdQk) to a video on youtube where seven robots are moving according to "stochastic localization of sources".
 
